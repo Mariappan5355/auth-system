@@ -1,0 +1,46 @@
+version: "3.9"
+services:
+  frontend:
+    build:
+      context: ./auth-system/auth-system-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" 
+    depends_on:
+      - backend 
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000/api
+
+  backend:
+    build:
+      context: ./auth-system/auth-system-backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000" 
+    depends_on:
+      - db 
+    environment:
+      - NODE_ENV=development
+      - PORT=5000
+      - DB_HOST=db
+      - DB_PORT=3307 
+      - DB_USER=root
+      - DB_PASSWORD=rootpassword
+      - DB_NAME=auth_system 
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword 
+      MYSQL_DATABASE: auth_system 
+      MYSQL_USER: appuser 
+      MYSQL_PASSWORD: apppassword 
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql 
+
+volumes:
+  db_data:
