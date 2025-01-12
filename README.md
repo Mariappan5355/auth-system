@@ -24,8 +24,8 @@ project-root/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone <repository_url>
-cd project-root
+git clone https://github.com/Mariappan5355/auth-system.git
+cd auth-system
 ```
 
 ### Step 2: Build and Start the Containers
