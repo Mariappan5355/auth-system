@@ -107,7 +107,6 @@ You can access the API documentation via Swagger at:
 http://localhost:5000/api-docs#/
 
 
-
 ### Notes
 
 - Modify environment variables in `docker-compose.yml` as needed.
