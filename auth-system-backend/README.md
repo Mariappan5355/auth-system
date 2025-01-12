@@ -90,4 +90,11 @@ To stop the backend server, press `Ctrl+C` in the terminal.
 * Modify environment variables in the `.env` file as needed
 * Ensure MySQL is running and accessible on the specified host and port
 * Ensure no other services are using port `5000` on your machine before starting the server
+* 
+
+
+### Step 8: API Documentation with Swagger
+You can access the API documentation via Swagger at:
+
+http://localhost:5000/api-docs#/
 

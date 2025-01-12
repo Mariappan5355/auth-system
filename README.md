@@ -101,6 +101,13 @@ To stop the containers, press `Ctrl+C` in the terminal running the `docker-compo
 docker-compose down
 ```
 
+### Step 6: API Documentation with Swagger
+You can access the API documentation via Swagger at:
+
+http://localhost:5000/api-docs#/
+
+
+
 ### Notes
 
 - Modify environment variables in `docker-compose.yml` as needed.

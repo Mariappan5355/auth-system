@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { verifyToken } from "../utils/tokenUtils";
-import User from "models/userModel";
+import User from "../models/userModel";
 
 // Auth middleware to authenticate the user
 export const authenticate = (req: Request, res: Response, next: NextFunction): void => {

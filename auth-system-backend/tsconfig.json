@@ -1,14 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "CommonJS",
-    "esModuleInterop": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
-    "baseUrl": "./src"
+    "target": "ES6",                        // Target JavaScript version
+    "module": "CommonJS",                    // Module system to use
+    "esModuleInterop": true,                 // Interoperability between CommonJS and ES modules
+    "strict": true,                          // Enable all strict type-checking options
+    "skipLibCheck": true,                    // Skip library type checking
+    "forceConsistentCasingInFileNames": true, // Enforce consistent casing in file names
+    "outDir": "./dist",                      // Output directory for compiled files
+    "baseUrl": "./src",                      // Set the base directory for non-relative module imports
+    "paths": {                               // Optional: configure custom module paths
+      "*": ["node_modules/*"]
+    }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*"                              // Include all TypeScript files in the src directory
+  ],
+  "exclude": [
+    "node_modules"                          // Exclude the node_modules directory
+  ]
 }
