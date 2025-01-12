@@ -41,8 +41,6 @@ Thumbs.db
 
 # Docker files
 docker-compose.override.yml
-*.env
-*.env.*
 
 # Misc
 npm-debug.log*
