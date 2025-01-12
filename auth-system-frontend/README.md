@@ -1,46 +1,71 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Auth System Frontend
 
-## Available Scripts
+This is the frontend for the authentication system built with React. It interacts with the backend API to provide user login and registration functionality.
 
-In the project directory, you can run:
+## Prerequisites
 
-### `npm start`
+Before running the application, ensure you have the following installed:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. [Node.js](https://nodejs.org/) (LTS version recommended)
+2. [npm](https://www.npmjs.com/) (Usually comes with Node.js)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Navigate to the `auth-system-frontend` directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+cd auth-system-frontend
+```
 
-### `npm run build`
+2. Install the required dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Running the Application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Once the dependencies are installed, run the following command to start the development server:
 
-### `npm run eject`
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This will start the React development server, and you can access the frontend at `http://localhost:3000`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Login Page**: Users can log in with predefined credentials (for testing purposes, use the seed users like `admin@example.com` and `user@example.com`).
+- **Registration Page**: Users can register by providing their email, password, and role.
+- **Dashboard**: After logging in, users are redirected to the dashboard, which displays user-specific information.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Environment Variables
 
-## Learn More
+You can modify or add environment variables in the `.env` file for the following configuration:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **REACT_APP_API_URL**: Set the URL for the backend API (default is `http://localhost:5000`).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Example `.env`:
+
+```
+REACT_APP_API_URL=http://localhost:5000
+```
+
+
+## Build for Production
+
+To create a production-ready build of the application, use the following command:
+
+```bash
+npm run build
+```
+
+This will create an optimized build of the application inside the `build/` directory.
+
+## Additional Notes
+
+- The frontend interacts with the backend API, which must be running for the authentication functionality to work.
+- Ensure that the backend API is correctly set up with the necessary seed users for testing.
+- The React app is set up with basic routing for login and dashboard pages.
+
