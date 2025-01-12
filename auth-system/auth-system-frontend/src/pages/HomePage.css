@@ -1,0 +1,147 @@
+/* HomePage.css */
+
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Matching gradient */
+  font-family: 'Arial', sans-serif;
+}
+
+.home-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 100%;
+  max-width: 450px;
+}
+
+h1 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #444;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.user-actions h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.user-actions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-actions li {
+  margin: 10px 0;
+}
+
+.action-link, button.action-link {
+  display: inline-block;
+  padding: 12px;
+  background-color: #ff7e5f;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  width: 200px; /* Set a fixed width for consistency */
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.action-link:hover, button.action-link:hover {
+  background-color: #feb47b;
+}
+
+.loading {
+  text-align: center;
+  font-size: 20px;
+  color: #ff7e5f;
+}
+
+.error-message {
+  text-align: center;
+  font-size: 20px;
+  color: red;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure modal is on top */
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.button-group button {
+  margin-right: 10px; /* Adds space between the buttons */
+}
+
+.button-group button:last-child {
+  margin-right: 0; /* Remove the margin from the last button */
+}
+
+/* HomePage.css */
+.home-container .user-actions .action-button {
+  width: 100%;  /* Ensures all buttons take full width */
+  padding: 12px;
+  background-color: #ff7e5f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.home-container .user-actions .action-button:hover {
+  background-color: #feb47b;
+}
+
+.home-container .user-actions .action-button:focus {
+  outline: none;
+}
