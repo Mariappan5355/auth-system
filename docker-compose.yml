@@ -2,7 +2,7 @@ version: "3.9"
 services:
   frontend:
     build:
-      context: ./auth-system/auth-system-frontend
+      context: ./auth-system-frontend
       dockerfile: Dockerfile
     ports:
       - "3000:80" 
@@ -13,7 +13,7 @@ services:
 
   backend:
     build:
-      context: ./auth-system/auth-system-backend
+      context: ./auth-system-backend
       dockerfile: Dockerfile
     ports:
       - "5000:5000" 
@@ -27,6 +27,7 @@ services:
       - DB_USER=root
       - DB_PASSWORD=rootpassword
       - DB_NAME=auth_system 
+      - JWT_SECRET=yourjwtsecret
 
   db:
     image: mysql:8.0
